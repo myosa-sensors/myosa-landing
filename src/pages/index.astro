@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Hero from '~/components/widgets/Hero.astro';
@@ -27,7 +26,7 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:rocket',
       },
-      { text: 'Learn more', href: '#faq' },
+      { text: 'Documentation', href: 'https://wiki.myosa-sensors.org/docs/intro' },
     ]}
     image={{
       src: '~/assets/images/banner op.png',
@@ -328,7 +327,7 @@ const metadata = {
       {
         title: 'What components are included in the MYOSA kit?',
         description:
-          'The MYOSA kit includes: Motherboard: An Arduino-derived open-source controller. Sensorboards: Various sensors that can be easily plugged into the motherboard. Actuators: Modules like LEDs and micromotors for output. Bluetooth and WiFi connectivity: For data transfer to the MYOSA mobile app. Mobile Application: For real-time monitoring and data visualization. Firmware: Open-source code that can be modified for custom projects.',
+          'The MYOSA kit includes: Motherboard: An ESP32-derived open-source micro-controller. Sensorboards: Various sensors that can be easily plugged into the motherboard. Actuators: Modules like LEDs and micromotors for output. Bluetooth and WiFi connectivity: For data transfer to the MYOSA mobile app. Mobile Application: For real-time monitoring and data visualization. Firmware: Open-source code that can be modified for custom projects.',
       },
       {
         title: 'How do I connect the sensors and actuators?',
@@ -381,5 +380,5 @@ const metadata = {
     <Fragment slot="subtitle"> Start your creative journey with MYOSA. </Fragment>
   </CallToAction>
 
-  <BlogLatestPosts title="Find out more content in our Blog" />
+  <!-- <BlogLatestPosts title="Find out more content in our Blog" /> -->
 </Layout>

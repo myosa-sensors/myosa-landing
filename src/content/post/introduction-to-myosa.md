@@ -24,7 +24,7 @@ In a world increasingly driven by technology, the concept of "smart systems" is 
 
 The MYOSA kit includes several key components:
 
-1. **Motherboard:** An Arduino-derived, open-source controller.
+1. **Motherboard:** An ESP32-derived open-source micro-controller.
 2. **MYOSA Sensorboards:** Plug-and-play sensor modules that can be connected to the motherboard.
 3. **MYOSA Actuators:** Modules like LEDs and micromotors for output functionality.
 4. **Wireless Connectivity:** 

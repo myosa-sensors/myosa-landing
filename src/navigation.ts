@@ -65,7 +65,7 @@ export const footerData = {
                 { text: 'Wiki', href: "https://wiki.myosa-sensors.org/docs/intro" },
                 { text: 'Downloads', href: '/downloads' },
                 { text: 'Blogs', href: '/blog' },
-                { text: 'Discord Community', href: '#' },
+                // { text: 'Discord Community', href: '#' },
             ],
         },
     ],
@@ -74,7 +74,7 @@ export const footerData = {
         { text: 'Privacy Policy', href: getPermalink('/privacy') },
     ],
     socialLinks: [
-        { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: 'https://github.com/onwidget/astrowind' },
+        // { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: 'https://github.com/onwidget/astrowind' },
         { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
     footNote: `
