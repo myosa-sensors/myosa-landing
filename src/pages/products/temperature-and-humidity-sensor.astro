@@ -1,0 +1,76 @@
+---
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import List from '~/components/List.astro';
+import Swiper from '~/components/Swiper.astro';
+import Table from '~/components/Table.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'SI7021 Temperature and Humidity Sensor',
+  subtitle: 'Digital Humidity and Temperature Monitoring',
+};
+
+const images = ['/images/SI7021-1.jpg', '/images/SI7021-2.png', '/images/SI7021-3.jpg'];
+
+const introduction = `The SI7021 is a high-accuracy sensor for measuring both temperature and humidity. It is commonly used in environmental monitoring and smart home applications due to its compact size and low power consumption.`;
+
+const featureList = [
+  'Measures relative humidity and temperature',
+  'I2C interface',
+  'Low power consumption',
+  'Factory calibrated',
+];
+
+const specifications = [
+  { label: 'Supply Voltage', value: '1.9V - 3.6V' },
+  { label: 'Humidity Range', value: '0-100% RH' },
+  { label: 'Temperature Range', value: ' -40°C to +85°C' },
+];
+
+const references = [
+  {
+    label: 'SI7021 Datasheet',
+    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+  },
+  {
+    label: 'Humidity Sensor Guide',
+    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+  },
+  {
+    label: 'Example Code',
+    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+  },
+];
+const applicationList = ['Environmental monitoring', 'HVAC systems', 'Weather stations'];
+---
+
+<Layout metadata={metadata}>
+  <div class="py-8 max-w-5xl mx-auto px-8 flex flex-col gap-10">
+    <Breadcrumbs
+      labelLinkArray={[
+        { label: 'Home', link: '/' },
+        { label: 'Products', link: '#' },
+        { label: metadata.title, link: '#' },
+      ]}
+    />
+
+    <div class="flex flex-col-reverse md:flex-row gap-10">
+      <Swiper images={images} />
+      <div class="max-w-sm gap-3 flex flex-col">
+        <h2 class="text-3xl font-bold">{metadata.title}</h2>
+        <h2 class="text-xl">{metadata.subtitle}</h2>
+        <p class="">{introduction}</p>
+      </div>
+    </div>
+
+    <div class="py-10 gap-20">
+      <p class="">{introduction}</p>
+
+      <List title="Key Features" list={featureList} />
+      <List title="Applications" list={applicationList} />
+
+      <Table title="Specifications" data={specifications} />
+      <Table title="Documents & Resources" data={references} />
+    </div>
+  </div>
+</Layout>
