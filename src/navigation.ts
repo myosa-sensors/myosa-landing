@@ -10,6 +10,11 @@ const productLinkData = [
     { text: 'Air Quality Sensor', href: '/products/air-quality-sensor' },
     { text: 'Actuator', href: '/products/actuator' },
 ]
+const kitsLinkData = [
+    { text: 'MYOSA Mini', href: '/kits/myosa-mini' },
+    { text: 'MYOSA Legacy', href: '/kits/myosa-legacy' },
+    { text: 'Build Your Own Kit', href: '#' },
+]
 
 export const headerData = {
     links: [
@@ -23,11 +28,7 @@ export const headerData = {
         },
         {
             text: 'Kits',
-            links: [
-                { text: 'MYOSA Mini', href: '#' },
-                { text: 'MYOSA Legacy', href: '#' },
-                { text: 'Build Your Own Kit', href: '#' },
-            ],
+            links: kitsLinkData
         },
         {
             text: 'FAQs',
@@ -57,11 +58,7 @@ export const footerData = {
         },
         {
             title: 'Kits',
-            links: [
-                { text: 'MYOSA Mini', href: '#' },
-                { text: 'MYOSA Legacy', href: '#' },
-                { text: 'Build Your Own Kit', href: '#' },
-            ],
+            links: kitsLinkData
         },
         {
             title: 'Support',
