@@ -1,0 +1,79 @@
+---
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import List from '~/components/List.astro';
+import Swiper from '~/components/Swiper.astro';
+import Table from '~/components/Table.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'MYOSA Motherboard',
+  subtitle: 'Versatile Motherboard for IoT and Embedded Systems',
+};
+
+const images = ['/images/CCS811-1.jpg', '/images/CCS811-2.png', '/images/CCS811-3.jpg'];
+
+const introduction = `This motherboard features the powerful ESP32 module, designed for IoT applications, prototyping, and embedded systems. It includes essential components such as GPIOs, I2C ports, and code-upload circuits, making it a compact yet flexible solution for various projects.`;
+
+const featureList = [
+  'Built-in ESP32 Module with Wi-Fi and Bluetooth',
+  'USB-C port for code uploading and power',
+  'TX/RX LEDs for upload status',
+  'Reverse polarity and ESD protection',
+  'I2C port for easy sensor/actuator connection',
+  '3.3V and 5V output via female Berg strip header',
+];
+
+const specifications = [
+  { label: 'Supply Voltage', value: '3.3V (regulated) / 5V (via USB-C)' },
+  { label: 'GPIOs', value: '12+ General Purpose I/O pins' },
+  { label: 'Memory', value: '512KB RAM' },
+  { label: 'Communication', value: 'I2C, SPI, UART' },
+];
+
+const references = [
+  {
+    label: 'ESP32 Datasheet',
+    link: 'https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf',
+  },
+  {
+    label: 'Getting Started Guide',
+    link: 'https://wiki.myosa-sensors.org/docs/hardware-documentation-and-code-guide/MYOSA-motherboard',
+  },
+  {
+    label: 'Myosa Libraries',
+    link: 'https://github.com/myosa-sensors/arduino-libraries',
+  },
+];
+const applicationList = ['IoT systems', 'Prototyping and development boards', 'Wireless embedded systems'];
+---
+
+<Layout metadata={metadata}>
+  <div class="py-8 max-w-5xl mx-auto px-8 flex flex-col gap-10">
+    <Breadcrumbs
+      labelLinkArray={[
+        { label: 'Home', link: '/' },
+        { label: 'Products', link: '#' },
+        { label: metadata.title, link: '#' },
+      ]}
+    />
+
+    <div class="flex flex-col-reverse md:flex-row gap-10">
+      <Swiper images={images} />
+      <div class="max-w-sm gap-3 flex flex-col">
+        <h2 class="text-3xl font-bold">{metadata.title}</h2>
+        <h2 class="text-xl">{metadata.subtitle}</h2>
+        <p class="">{introduction}</p>
+      </div>
+    </div>
+
+    <div class="py-10 gap-20">
+      <p class="">{introduction}</p>
+
+      <List title="Key Features" list={featureList} />
+      <List title="Applications" list={applicationList} />
+
+      <Table title="Specifications" data={specifications} />
+      <Table title="Documents & Resources" data={references} />
+    </div>
+  </div>
+</Layout>

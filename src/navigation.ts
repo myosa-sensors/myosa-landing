@@ -1,14 +1,14 @@
 import { getAsset, getBlogPermalink, getPermalink } from './utils/permalinks';
 
 const productLinkData = [
-    // { text: 'MYOSA Motherboard', href: '#' },
+    { text: 'MYOSA Motherboard', href: '/products/myosa-motherboard' },
     { text: 'Accelerometer + Gyroscope Sensor', href: '/products/accelerometer-and-gyroscope-sensor' },
     { text: 'Gesture + Proximity + RGB Sensor', href: '/products/gesture-proximity-light-and-color-sensor' },
     { text: 'Barometric Pressure Sensor', href: '/products/barometric-pressure-sensor' },
     { text: 'Temperature + Humidity Sensor', href: '/products/temperature-and-humidity-sensor' },
     { text: 'OLED Display', href: '/products/oled-display' },
     { text: 'Air Quality Sensor', href: '/products/air-quality-sensor' },
-    // { text: 'Actuator', href: '#' },
+    { text: 'Actuator', href: '/products/actuator' },
 ]
 
 export const headerData = {
