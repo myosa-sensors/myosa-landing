@@ -25,6 +25,8 @@ export const headerData = {
             text: 'Kits',
             links: [
                 { text: 'MYOSA Mini', href: '#' },
+                { text: 'MYOSA Legacy', href: '#' },
+                { text: 'Build Your Own Kit', href: '#' },
             ],
         },
         {
@@ -42,8 +44,8 @@ export const headerData = {
     ],
     actions: [{
         text: 'Buy Now',
-        href: 'https://wa.me/917574842044?text=I am%20interested%20in%20getting%20MYOSA%20kit',
-        target: '_blank',
+        href: '/contact',
+        // target: '_blank',
     }],
 };
 
@@ -57,13 +59,15 @@ export const footerData = {
             title: 'Kits',
             links: [
                 { text: 'MYOSA Mini', href: '#' },
+                { text: 'MYOSA Legacy', href: '#' },
+                { text: 'Build Your Own Kit', href: '#' },
             ],
         },
         {
             title: 'Support',
             links: [
                 { text: 'Wiki', href: "https://wiki.myosa-sensors.org/docs/intro" },
-                { text: 'Downloads', href: '/downloads' },
+                // { text: 'Downloads', href: '/downloads' },
                 { text: 'Blogs', href: '/blog' },
                 // { text: 'Discord Community', href: '#' },
             ],

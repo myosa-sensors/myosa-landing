@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
@@ -22,12 +21,12 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get Started',
-        href: 'https://wa.me/917574842044?text=I am%20interested%20in%20getting%20MYOSA%20kit',
-        target: '_blank',
-        icon: 'tabler:rocket',
+        text: 'Build Your Own Kit',
+        href: '#',
+        // target: '_blank',
+        // icon: 'tabler:circles-filled',
       },
-      { text: 'Documentation', href: 'https://wiki.myosa-sensors.org/docs/intro' },
+      { text: 'Buy Now', href: '/contact' },
     ]}
     image={{
       src: '~/assets/images/banner op.png',
@@ -367,7 +366,7 @@ const metadata = {
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     actions={[
       {
         variant: 'primary',
@@ -381,7 +380,7 @@ const metadata = {
     <Fragment slot="title"> Get MYOSA Now! </Fragment>
 
     <Fragment slot="subtitle"> Start your creative journey with MYOSA. </Fragment>
-  </CallToAction>
+  </CallToAction> -->
 
   <!-- <BlogLatestPosts title="Find out more content in our Blog" /> -->
 </Layout>

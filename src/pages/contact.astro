@@ -1,8 +1,7 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Button from '~/components/ui/Button.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Contact',
@@ -12,9 +11,9 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact Us" title="Let's Connect!" />
 
-  <ContactUs
+  <!-- <ContactUs
     id="form"
     title="Drop us a message today!"
     subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
@@ -38,42 +37,64 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
     description="Our support team typically responds within 24 business hours."
-  />
+  /> -->
 
   <!-- Features2 Widget ************** -->
+  <!-- <div class="flex space-x-5 justify-center -my-20">
+    <img src="/images/contact-us-blue.webp" alt="Contact us image" width="550" height="100%" />
+  </div> -->
 
-  <Features2
-    title="We are here to help!"
+  <!-- <Features2
+    title=""
     items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
+      //   {
+      //     title: 'General support',
+      //     description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+      //   },
+      //   {
+      //     title: 'Contact sales',
+      //     description:
+      //       'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+      //   },
+      //   {
+      //     title: 'Technical support',
+      //     description:
+      //       'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+      //   },
       {
         title: 'Phone',
         description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'WhatsApp',
+        description: 'contact@support.com',
+        href: '/abd',
+        icon: 'tabler:brand-whatsapp',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
         icon: 'tabler:mail',
       },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
     ]}
-  />
+  /> -->
+
+  <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mb-24">
+    <div class="flex w-full sm:w-auto">
+      <Button icon="tabler:phone" variant="primary" href="tel:+917574842044" class="w-full sm:mb-0">Call</Button>
+    </div>
+
+    <div class="flex w-full sm:w-auto">
+      <Button icon="tabler:brand-whatsapp" variant="primary" href="https://wa.me/917574842044" class="w-full sm:mb-0"
+        >WhatsApp</Button
+      >
+    </div>
+
+    <div class="flex w-full sm:w-auto">
+      <Button icon="tabler:mail" variant="primary" href="mailto:myosa-senors@gmail.com" class="w-full sm:mb-0"
+        >Email</Button
+      >
+    </div>
+  </div>
 </Layout>
