@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 import IEEESensorsCouncil from '../../assets/images/IEEE-Sensors-Council-Logo.png';
 import MakeSenseEdutech from '../../assets/images/Makesense Edutech Logo.png';
 import PegasusAutomation from '../../assets/images/Pegasus Logo.png';
-import Headline from '../blog/Headline.astro';
 import WidgetWrapper from '../ui/WidgetWrapper.astro';
 
 const {
@@ -19,33 +18,44 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`}>
-  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+<WidgetWrapper id={id} isDark={isDark} containerClass={`bg-slate-100 dark:bg-slate-800  ${classes?.container ?? ''}`}>
+  <div class="flex flex-col lg:flex-row gap-10 justify-between mx-20 align-top items-center">
+    <div>
+      <h2 class="text-xl font-bold mb-10 text-center">Brought To You By</h2>
+      <div class="flex flex-row gap-20 items-center">
+        <div>
+          <a title="MakeSense Edutech" href="https://makesenseedutech.com" target="_blank">
+            <Image
+              id="partner-company"
+              src={MakeSenseEdutech}
+              alt="Logo"
+              class="max-w-36 opacity-85 hover:opacity-100"
+            />
+          </a>
+        </div>
 
-  <div class="">
-    <div class="flex flex-col lg:flex-row gap-10 md:gap-20 justify-between mx-32 my-10 align-top items-center">
-      <div>
-        <a title="MakeSense Edutech" href="https://makesenseedutech.com" target="_blank">
-          <Image id="partner-company" src={MakeSenseEdutech} alt="Logo" class="max-w-52 opacity-85 hover:opacity-100" />
-        </a>
+        <div>
+          <a title="Pegasus Automation" href="https://pegasusautomation.com" target="_blank">
+            <Image
+              id="partner-company"
+              src={PegasusAutomation}
+              alt=" Logo"
+              class={'max-w-20 opacity-85 hover:opacity-100'}
+            />
+          </a>
+        </div>
       </div>
-      <div>
-        <a title="Pegasus Automation" href="https://pegasusautomation.com" target="_blank">
-          <Image
-            id="partner-company"
-            src={PegasusAutomation}
-            alt=" Logo"
-            class={'max-w-28 opacity-85 hover:opacity-100'}
-          />
-        </a>
-      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-10 text-center">Supported By</h2>
       <div>
         <a title="IEEE Sensors Council" href="https://ieee-sensors.org/" target="_blank">
           <Image
             id="partner-company"
             src={IEEESensorsCouncil}
             alt="Logo"
-            class="max-w-72 opacity-85 hover:opacity-100"
+            class="max-w-56 opacity-85 hover:opacity-100"
           />
         </a>
       </div>
