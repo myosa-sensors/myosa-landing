@@ -1,9 +1,8 @@
 ---
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
 import List from '~/components/List.astro';
 import Swiper from '~/components/Swiper.astro';
 import Table from '~/components/Table.astro';
-import Breadcrumbs from '~/components/Breadcrumbs.astro';
-import Headline from '~/components/ui/Headline.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -26,15 +25,15 @@ const specifications = [
 const references = [
   {
     label: 'APDS9960 Datasheet',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    link: 'https://cdn.sparkfun.com/assets/learn_tutorials/3/2/1/Avago-APDS-9960-datasheet.pdf',
   },
   {
-    label: 'Proximity Sensor Guide',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    label: 'Getting Started Guide',
+    link: 'https://wiki.myosa-sensors.org/docs/hardware-documentation-and-code-guide/gesture-and-rgb-sensor',
   },
   {
     label: 'Gesture Control Library',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    link: 'https://github.com/myosa-sensors/arduino-libraries/tree/main/LightProximityAndGesture',
   },
 ];
 const applicationList = ['Gesture-based control', 'Ambient light detection', 'Color detection in displays    '];

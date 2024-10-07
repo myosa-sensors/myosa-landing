@@ -1,9 +1,8 @@
 ---
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
 import List from '~/components/List.astro';
 import Swiper from '~/components/Swiper.astro';
 import Table from '~/components/Table.astro';
-import Headline from '~/components/ui/Headline.astro';
-import Breadcrumbs from '~/components/Breadcrumbs.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -31,15 +30,15 @@ const specifications = [
 const references = [
   {
     label: 'SSD1306 Datasheet',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    link: 'https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf',
   },
   {
-    label: 'Display Driver Library',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    label: 'Getting Started Guide',
+    link: 'https://wiki.myosa-sensors.org/docs/hardware-documentation-and-code-guide/oled-display',
   },
   {
     label: 'OLED Display Guide',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    link: 'https://github.com/myosa-sensors/arduino-libraries/tree/main/OLED',
   },
 ];
 const applicationList = ['Embedded display systems', 'Wearable devices', 'Consumer electronics'];

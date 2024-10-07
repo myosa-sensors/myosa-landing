@@ -1,9 +1,8 @@
 ---
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
 import List from '~/components/List.astro';
 import Swiper from '~/components/Swiper.astro';
 import Table from '~/components/Table.astro';
-import Breadcrumbs from '~/components/Breadcrumbs.astro';
-import Headline from '~/components/ui/Headline.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
@@ -36,11 +35,11 @@ const references = [
   },
   {
     label: 'Getting Started Guide',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    link: 'https://wiki.myosa-sensors.org/docs/hardware-documentation-and-code-guide/accelerometer-and-gyroscope-sensor',
   },
   {
     label: 'MPU6050 Library',
-    link: 'https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf',
+    link: 'https://github.com/myosa-sensors/arduino-libraries/tree/main/AccelAndGyro',
   },
 ];
 const applicationList = ['Drones', 'Wearables', 'Motion capture'];
