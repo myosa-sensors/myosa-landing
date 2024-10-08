@@ -3,7 +3,9 @@ const { link, title, subtitle, image, imageClass } = Astro.props;
 ---
 
 <a href={link} target="_blank">
-  <div class="bg-slate-100 dark:bg-slate-900 group rounded-xl p-5 flex flex-col gap-2 justify-center items-center">
+  <div
+    class="bg-slate-100 dark:bg-slate-900 group rounded-xl transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-md p-5 flex flex-col gap-2 justify-center items-center"
+  >
     <img src={image} class={imageClass + ' thumbnail object-cover rounded-xl'} />
     <h4 class="text-lg font-bold text-center">{title}</h4>
     <p class="opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 -mt-2">
