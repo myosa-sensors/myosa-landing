@@ -1,28 +1,31 @@
 ---
 import Breadcrumbs from '~/components/Breadcrumbs.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import List from '../../components/List.astro';
+import Table from '../../components/Table.astro';
+import HoverCard from './HoverCard.astro';
 
 const metadata = {
   title: 'MYOSA Mini Kit',
-  subtitle: 'Learning Kit',
+  subtitle: 'Your getting started IoT and Sensor Development Kit',
 };
 
 const images = ['/images/CCS811-1.jpg', '/images/CCS811-2.png', '/images/CCS811-3.jpg'];
 
-const introduction = `This custom actuator features an I2C GPIO expander for efficient control, a TRIAC for managing high-power loads, and a buzzer for audible alerts. Designed for flexibility, it integrates seamlessly with ESP32-based systems and is ideal for industrial and IoT applications requiring precise control.`;
+const introduction = `The MYOSA Mini Kit is designed for embedded systems and IoT development, offering a variety of sensors and an OLED display, all powered by the MYOSA Motherboard. Ideal for students, hobbyists, and developers, this kit includes everything needed for projects involving environmental sensing, motion detection, and display interfacing.`;
 
 const featureList = [
-  'I2C GPIO Expander for multiple outputs',
-  'TRIAC for high-power load control',
-  'Integrated buzzer for alerts',
-  'Compact design for embedded use',
+  'Seamless I2C communication for all sensors',
+  'Easy integration with kit through USB-C',
+  '4-wire JST hassle-free connection for components',
+  'Stackable design',
 ];
 
-const specifications = [
-  { label: 'Communication', value: 'I2C' },
-  { label: 'TRIAC Voltage', value: '240V AC' },
-  { label: 'Buzzer Frequency', value: '2kHz' },
-];
+// const specifications = [
+//   { label: 'Communication', value: 'I2C' },
+//   { label: 'TRIAC Voltage', value: '240V AC' },
+//   { label: 'Buzzer Frequency', value: '2kHz' },
+// ];
 
 const references = [
   //   {
@@ -31,18 +34,22 @@ const references = [
   //   },
   {
     label: 'Getting Started Guide',
-    link: 'https://wiki.myosa-sensors.org/docs/hardware-documentation-and-code-guide/actuator',
+    link: 'https://wiki.myosa-sensors.org/docs/intro',
   },
   {
-    label: 'Myosa Libraries',
-    link: 'https://github.com/myosa-sensors/arduino-libraries/tree/main/Actuator',
+    label: 'Example codes and libraries',
+    link: 'https://github.com/myosa-sensors/arduino-libraries',
   },
 ];
-const applicationList = ['Industrial automation', 'Smart home devices', 'IoT systems'];
+const applicationList = [
+  'Environmental monitoring',
+  'Motion sensing and gesture control',
+  'Data logging and display projects',
+];
 ---
 
 <Layout metadata={metadata}>
-  <div class="py-8 max-w-5xl mx-auto px-8 flex flex-col gap-10">
+  <div class="py-8 max-w-7xl mx-auto px-8 flex flex-col gap-10">
     <Breadcrumbs
       labelLinkArray={[
         { label: 'Home', link: '/' },
@@ -51,23 +58,59 @@ const applicationList = ['Industrial automation', 'Smart home devices', 'IoT sys
       ]}
     />
 
-    <div class="flex flex-col-reverse md:flex-row gap-10">
-      <!-- <Swiper images={images} /> -->
-      <div class="max-w-sm gap-3 flex flex-col">
-        <h2 class="text-3xl font-bold">{metadata.title}</h2>
-        <h2 class="text-xl">{metadata.subtitle}</h2>
-        <!-- <p class="">{introduction}</p> -->
-      </div>
+    <div>
+      <h2 class="text-4xl font-bold text-center">{metadata.title}</h2>
+      <h2 class="text-xl text-center">{metadata.subtitle}</h2>
     </div>
 
-    <!-- <div class="py-10 gap-20">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 items-center">
+      <div class="sm:row-span-2">
+        <HoverCard
+          imageClass="h-[50vh] w-72"
+          link="/products/myosa-motherboard"
+          title="MYOSA Motherboard"
+          subtitle="ESP32-based board with Wi-Fi/Bluetooth"
+          image="/images/BMP180-1.jpg"
+        />
+      </div>
+      <HoverCard
+        imageClass="h-36  w-52"
+        link="/products/oled-display"
+        title="OLED Display (SSD1306)"
+        subtitle="128x64 monochrome OLED for data display"
+        image="/images/BMP180-1.jpg"
+      />
+      <HoverCard
+        imageClass="h-36  w-52"
+        link="/products/barometric-pressure-sensor"
+        title="Barometric Pressure Sensor (BMP180)"
+        subtitle="Accurate altitude and pressure readings"
+        image="/images/BMP180-1.jpg"
+      />
+      <HoverCard
+        imageClass="h-36 w-52"
+        link="/products/gesture-proximity-light-and-color-sensor"
+        title="Light/Proximity/Gesture Sensor (APDS9960)"
+        subtitle="Detects ambient light, proximity, and gestures"
+        image="/images/BMP180-1.jpg"
+      />
+      <HoverCard
+        imageClass="h-36  w-52"
+        link="/products/accelerometer-and-gyroscope-sensor"
+        title="Accelerometer + Gyroscope Sensor (MPU6050)"
+        subtitle="Motion and orientation tracking"
+        image="/images/BMP180-1.jpg"
+      />
+    </div>
+
+    <div class="py-10 gap-20">
       <p class="">{introduction}</p>
 
       <List title="Key Features" list={featureList} />
       <List title="Applications" list={applicationList} />
 
-      <Table title="Specifications" data={specifications} />
+      <!-- <Table title="Specifications" data={specifications} /> -->
       <Table title="Documents & Resources" data={references} />
-    </div> -->
+    </div>
   </div>
 </Layout>
